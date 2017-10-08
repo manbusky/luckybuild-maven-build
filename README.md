@@ -40,38 +40,38 @@
 
 
 ```
-	<plugin>
-		<groupId>manbu.maven.plugin</groupId>
-        <artifactId>luckybuild-maven-build</artifactId>
-        <version>0.9.0</version>
-			<executions>
-                <execution>
-				<phase>prepare-package</phase>
-				<goals>
-					<goal>sequence</goal>
-				</goals>
-            </execution>
-            </executions>
-            <configuration>
-                <encoding>UTF-8</encoding>
-                <skips>
-                    <skip>jquery-2.1.4.min.js</skip>
-                    <skip>bootstrap.min.js</skip>
-                </skips>
-                <includes>
-                    <inlcude>**/*.jsp</inlcude>
-                    <inlcude>**/*.html</inlcude>
-                </includes>
-            </configuration>
-	</plugin>
-	
-	<plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-war-plugin</artifactId>
-		<configuration>
-			<warSourceExcludes>**/*.jsp,**/*.html</warSourceExcludes>
-		</configuration>
-	</plugin>
+<plugin>
+    <groupId>manbu.maven.plugin</groupId>
+    <artifactId>luckybuild-maven-build</artifactId>
+    <version>0.9.0</version>
+    <executions>
+        <execution>
+            <phase>prepare-package</phase>
+            <goals>
+                <goal>sequence</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <encoding>UTF-8</encoding>
+        <skips>
+            <skip>jquery-2.1.4.min.js</skip>
+            <skip>bootstrap.min.js</skip>
+        </skips>
+        <includes>
+            <inlcude>**/*.jsp</inlcude>
+            <inlcude>**/*.html</inlcude>
+        </includes>
+    </configuration>
+    </plugin>
+
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+        <warSourceExcludes>**/*.jsp,**/*.html</warSourceExcludes>
+    </configuration>
+</plugin>
 
 ```
 
